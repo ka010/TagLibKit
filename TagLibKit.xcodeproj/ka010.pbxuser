@@ -1,0 +1,32 @@
+// !$*UTF8*$!
+{
+	0867D690FE84028FC02AAC07 /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeTarget = 8DC2EF4F0486A6940098B216 /* TagLibKit */;
+		addToTargets = (
+			8DC2EF4F0486A6940098B216 /* TagLibKit */,
+		);
+		codeSenseManager = 4E7425321168C4D0005D668E /* Code sense */;
+		perUserDictionary = {
+			PBXPerProjectTemplateStateSaveDate = 292078799;
+			PBXWorkspaceStateSaveDate = 292078799;
+		};
+		sourceControlManager = 4E7425311168C4D0005D668E /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	4E7425311168C4D0005D668E /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+	};
+	4E7425321168C4D0005D668E /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	8DC2EF4F0486A6940098B216 /* TagLibKit */ = {
+		activeExec = 0;
+	};
+}
