@@ -1,0 +1,7 @@
+# DEPENDENCIES
+taglib / taglib_c is required
+
+# INSTALL: 
+xcodebuild -configuration Release install 
+
+Framework will be installed to /Library/Frameworks/TagLibKit.framework

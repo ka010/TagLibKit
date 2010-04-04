@@ -1,15 +1,15 @@
 // !$*UTF8*$!
 {
 	0867D690FE84028FC02AAC07 /* Project object */ = {
-		activeBuildConfigurationName = Debug;
+		activeBuildConfigurationName = Release;
 		activeTarget = 8DC2EF4F0486A6940098B216 /* TagLibKit */;
 		addToTargets = (
 			8DC2EF4F0486A6940098B216 /* TagLibKit */,
 		);
 		codeSenseManager = 4E7425321168C4D0005D668E /* Code sense */;
 		perUserDictionary = {
-			PBXPerProjectTemplateStateSaveDate = 292078799;
-			PBXWorkspaceStateSaveDate = 292078799;
+			PBXPerProjectTemplateStateSaveDate = 292079743;
+			PBXWorkspaceStateSaveDate = 292079743;
 		};
 		sourceControlManager = 4E7425311168C4D0005D668E /* Source Control */;
 		userBuildSettings = {
@@ -25,6 +25,22 @@
 	4E7425321168C4D0005D668E /* Code sense */ = {
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
+	};
+	4E7425341168C565005D668E /* tagLib.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {791, 854}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 642}";
+			sepNavWindowFrame = "{{38, 50}, {850, 982}}";
+		};
+	};
+	4E7425351168C565005D668E /* tagLib.mm */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {791, 1442}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 906}";
+			sepNavWindowFrame = "{{15, 71}, {850, 982}}";
+		};
 	};
 	8DC2EF4F0486A6940098B216 /* TagLibKit */ = {
 		activeExec = 0;
