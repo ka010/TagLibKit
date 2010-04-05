@@ -12,14 +12,18 @@
 @interface tagLib : NSObject {
 	TagLib_File *file;
 	TagLib_Tag *tag;
-	
+	const TagLib_AudioProperties *audio;
+	NSString *filepath;
 	
 }
-
+@property(readwrite) NSString *filepath;
 @property(readwrite) TagLib_File *file;
 @property(readwrite) TagLib_Tag *tag;
 
+
 -(void)initWithFile:(NSString *)f;
+
+-(NSString *)filepath;
 
 -(NSString *)title;
 
@@ -35,14 +39,29 @@
 
 -(NSString *)comment;
 
--(NSString *)bitrate;
+-(NSNumber *)bitrate;
 
--(NSString *)samplerate;
+-(NSNumber *)samplerate;
 
--(NSString *)channels;
+-(NSNumber *)channels;
 
--(NSString *)duration;
+-(NSNumber *)duration;
+
+-(NSString *)test;
+
+-(void)setTitle:(NSString *)title;
+
+-(void)setArtist:(NSString *)artist;
+
+-(void)setAlbum:(NSString *)album;
+
+-(void)setGenre:(NSString *)genre;
+
+-(void)setYear:(NSNumber *)year;
+
+-(void)setTrack:(NSNumber *)track;
 
 -(void)log;
+
 
 @end

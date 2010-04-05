@@ -10,14 +10,21 @@
 
 
 @implementation tagLib
+@synthesize filepath;
 @synthesize file;
 @synthesize tag;
 
+
 -(void)initWithFile:(NSString *)f {
-	file = taglib_file_new([f cString]);
+	filepath = f;
+	file = taglib_file_new([f UTF8String]);
 	tag = taglib_file_tag(file);
+	audio = taglib_file_audioproperties(file);
 }
 
+-(NSString *)test {
+		return filepath;
+}
 
 -(NSString *)title {
 
@@ -68,30 +75,53 @@
 	return track;
 }
 
--(NSString *)channels {
-	
-	return @"TODO";
+-(NSNumber *)channels {
+	return [NSNumber numberWithInt: taglib_audioproperties_channels(audio)];
 }
 
--(NSString *)bitrate {
+-(NSNumber *)bitrate {
 			
-	return @"TODO";
+	return [NSNumber numberWithUnsignedInt: taglib_audioproperties_bitrate(audio)];
 }
 
--(NSString *)samplerate {
+-(NSNumber *)samplerate {
 	
-	return @"TODO";
+	return [NSNumber numberWithUnsignedInt: taglib_audioproperties_samplerate(audio)];
 }
 
--(NSString *)duration {
+-(NSNumber *)duration {
 	
-	return @"TODO";
+	return [NSNumber numberWithUnsignedInt: taglib_audioproperties_length(audio)];
+}
+
+-(void)setTitle:(NSString *)title {
+	taglib_tag_set_title(tag,[title UTF8String]);
+}
+
+-(void)setArtist:(NSString *)artist {
+	taglib_tag_set_artist(tag,[artist UTF8String]);
+}
+
+-(void)setAlbum:(NSString *)album {
+	taglib_tag_set_album(tag,[album UTF8String]);
+}
+
+-(void)setGenre:(NSString *)genre {
+	taglib_tag_set_genre(tag,[genre UTF8String]);
+}
+
+-(void)setTrack:(NSNumber *)track {
+	taglib_tag_set_track(tag,[track unsignedIntValue]);
+}
+
+-(void)setYear:(NSNumber *)year {
+	taglib_tag_set_year(tag,[year unsignedIntValue]);
 }
 
 -(void)log {
 	
-	NSLog(@"\n Tag: \n artist = %@ \n title = %@ \n album = %@ \n track = %@ \n year = %@ \n genre = %@ \n channels = %@ \n comment = %@ \n ", 
-					[self artist], [self title], [self album], [self track], [self year], [self genre], [self channels], [self comment]);
+	NSLog(@"\n Tag: \n artist = %@ \n title = %@ \n album = %@ \n track = %@ \n year = %@ \n genre = %@ \n channels = %@ \n comment = %@ \n  \n Audio: \n duration = %@ \n channels = %@ \n bitrate = %@ \n samplerate = %@ \n",
+					[self artist], [self title], [self album], [self track], [self year], [self genre], [self channels], [self comment], [self duration], [self channels], [self bitrate], [self samplerate]);
 }
 
 
